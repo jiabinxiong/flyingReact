@@ -1,0 +1,47 @@
+.ui-checkbox-label {
+    font-size: 12px;
+    color: #34495e;
+}
+
+.ui-checkbox-label .checkbox {
+    float: left;
+    margin: 0 5px 0 0;
+	font-size: 30px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	width: 40px;
+	height: 20px;
+	background: #ddd;
+	border-radius: 25px;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.ui-checkbox-label .checkbox:checked{
+    background: rgb(0, 160, 255);
+}
+
+.ui-checkbox-label .checkbox:after{
+    position: absolute;
+    content: "";
+    top: -1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+            box-shadow: 0 0 .25em rgba(0,0,0,.3);
+    -webkit-transform: scale(.7);
+            transform: scale(.7);
+    left: 0;
+    -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+
+.ui-checkbox-label .checkbox:checked:after{
+    left: calc(100% - 46px);
+}

@@ -1,0 +1,140 @@
+.ui-hour-cnt {
+    width: 260px;
+    height: 300px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    .ui-hour-t {
+        height: 40px;
+        .ui-hour-t-text {
+            padding: 0 0 0 85px;
+            line-height: 40px;
+            font-size: 36px;
+            color: #fff;
+            .ui-hour-t-hour-text,
+            .ui-hour-t-minute-text {
+                cursor: pointer;
+            }
+
+            .ui-hour-t-HM-select-text {
+                color: #00a0ff;   
+            }
+        }
+
+        .ui-hour-t-AMPM {
+            float: left;
+            width: 40px;
+            height: 20px;
+            .ui-hour-t-AM-text,
+            .ui-hour-t-PM-text {
+                display: block;
+                height: 20px;
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 20px;
+                color: #fff;
+            }
+
+            .ui-hour-t-AMPM-select-text {
+                color: #00a0ff;
+            }
+        }
+    }
+}
+
+.ui-hour-minute-block {
+    position: relative;  
+    margin: 30px auto 0;  
+    width: 200px;
+    height: 200px;
+}
+
+.ui-hour-minute-list {
+    
+    .ui-hour-minute-li {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+        cursor: pointer;
+        margin: -15px 0 0 -15px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;            
+        color: #fff;        
+
+        &:hover {
+            background-color: #00a0ff;
+        }
+    }
+}
+
+.ui-hour-pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;    
+    margin: -4px 0 0 -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #00a0ff;
+
+    .ui-hour-pointer-strip {
+        position: absolute;
+        top: -90px;
+        left: 3px;
+        width: 2px;
+        height: 90px;
+        border-radius: 2px;
+        background-color: #00a0ff;
+    }
+
+    .ui-hour-pointer-radius {
+        position: absolute;
+        top: -112px;
+        left: -11px;
+        z-index: 9;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #00a0ff;
+    }
+}
+
+.ui-hour-pointer-12 {
+    -webkit-animation-name: uiHourPointer12;
+    animation-name: uiHourPointer12;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+.ui-hour-pointer-1 {
+    -webkit-animation-name: uiHourPointer1;
+    animation-name: uiHourPointer1;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes uiHourPointer1 {
+    0% { -webkit-transform: rotate(90deg); }
+    100% { -webkit-transform: rotate(90deg) }
+}
+@keyframes uiHourPointer1 {
+    0% { transform: rotate(90deg); }
+    100% { transform: rotate(90deg) }
+}
+
+
+@-webkit-keyframes uiHourPointer12 {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(0deg) }
+}
+@keyframes uiHourPointer12 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg) }
+}
